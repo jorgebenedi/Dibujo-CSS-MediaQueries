@@ -1,0 +1,189 @@
+
+body {
+  font-size: large;
+}
+
+@media (max-width: 575px) {
+  body {
+      background-color: rgb(194, 214, 229);
+      font-size: 50px;
+  }
+
+  .container-fluid {
+      display: grid;
+      grid-template-rows: 100px auto 200px;
+      height: 50vh;
+  }
+
+  .row {
+      grid-row: 1;
+  }
+
+  .header {
+      background-color: rgb(98, 198, 205);
+      height: 100px;
+      border: black 3px solid;
+  }
+
+  .rowCuerpo {
+     font-size: 50px;
+      grid-row: 2;
+      display: grid;
+      grid-template-rows: auto auto auto;
+  }
+
+  .columnaCuerpo {
+      background-color: rgb(255, 0, 0);
+      grid-row: 1;
+      width: 100%;
+      border: black 3px solid;
+  }
+
+  .rowCuerpo .columnaCuerpo:nth-child(2) {
+      background-color: rgb(156, 177, 153);
+      grid-row: 2;
+      width: 100%;
+  }
+
+  .rowCuerpo .columnaCuerpo:nth-child(3) {
+      background-color: rgb(34, 255, 0);
+      grid-row: 3;
+      width: 100%;
+  }
+
+  .rowPie {
+      grid-row: 3;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+  }
+
+  .columnaPie {
+      background-color: rgb(231, 223, 102);
+      height: 100%;
+      border: black 3px solid;
+  }
+
+  .columnaPie:first-child {
+      grid-row: 1;
+  }
+
+  .columnaPie:nth-child(2) {
+      grid-row: 2;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  body {
+      background-color: rgb(255, 255, 255);
+      font-size: 50px;
+  }
+
+  .container-fluid {
+      display: grid;
+      grid-template-rows: auto auto auto;
+      height: 50vh;
+  }
+
+  .row {
+      grid-row: 1;
+  }
+
+  .header {
+      background-color: rgb(98, 198, 205);
+      height: 100px;
+      margin: 2px;
+      border: black 3px solid;
+  }
+
+  .rowCuerpo {
+      grid-row: 2;
+      display: grid;
+      grid-template-rows: 300px 300px;
+  }
+
+  .columnaCuerpo {
+      background-color: red;
+      display: flex;
+      align-items: center;
+      grid-row: 1;
+      border: black 3px solid;
+  }
+
+  .rowCuerpo .columnaCuerpo:nth-child(3) {
+    
+      background-color: rgb(34, 255, 0);
+      margin: 2px;
+      grid-row: 2;
+      grid-column: 1 / 3;
+      width: 100%;
+  }
+
+  .rowPie {
+      grid-row: 3;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+  }
+
+  .columnaPie {
+      background-color: rgb(231, 223, 102);
+      height: 100%;
+      border: black 3px solid;
+  }
+
+  .columnaPie:first-child {
+      grid-row: 1;
+  }
+
+  .columnaPie:nth-child(2) {
+      grid-row: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+      background-color: rgb(255, 255, 255);
+      display: grid;
+      grid-template-rows: 100px 600px 100px;
+      font-size: 50px;
+
+  }
+
+  .row {
+      grid-row: 1;
+  }
+
+  .header {
+      background-color: green;
+      flex: 1em;
+      height: 100px;
+      margin: 2px;
+      border: black 3px solid;
+  }
+
+  .rowCuerpo {
+      grid-row: 2;
+      display: flex;
+  }
+
+  .columnaCuerpo {
+      background-color: red;
+      flex: 1em;
+      height: 600px;
+      margin: 2px;
+      border: black 3px solid;
+  }
+
+  .rowPie {
+      grid-row: 3;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .columnaPie {
+      background-color: rgb(231, 223, 102);
+      flex: 1em;
+      height: 100px;
+      margin: 2px;
+      border: black 3px solid;
+  }
+}

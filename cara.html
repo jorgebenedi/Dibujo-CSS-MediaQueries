@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara </title>
+    <link rel="stylesheet" href="cara.css">
+</head>
+<body>
+    <div class="cara">
+        <div class="ojo ojoI">
+        </div>
+        <div class="ojo ojoD">
+        </div>
+        <div class="nariz"></div>
+        <div class="boca"></div>
+
+    </div>
+</body>
+
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.cara {
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr; 
+    grid-template-rows: 60px 60px 30px 50px;
+    position: relative;
+}
+
+.ojo {
+    background-color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ojo::after {
+    content: "";
+    background-color: black;
+    border-radius: 50%;
+    width: 70%; 
+    height: 90%; 
+    position: absolute;
+    margin-left: 15px;
+}
+
+
+
+ .ojoI {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end; 
+}
+
+.ojoD {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: start; 
+}
+
+
+.nariz {
+    background-color: white;
+    width: 30px;
+    height: 25px;
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: center;
+    border: 3px solid #ff962d;
+    margin-top: -25px;
+
+    
+}
+
+.boca {
+    background-color: red;
+    width: 140px;
+    height: 70px;
+    grid-column: 1 / 4;
+    grid-row: 4;
+    justify-self: center;
+    border-radius: 0 0 100px 100px;
+    margin-top: -20px;
+}
+
+
+
+</style>
+</html>
